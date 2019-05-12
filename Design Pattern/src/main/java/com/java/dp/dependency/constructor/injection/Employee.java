@@ -12,7 +12,6 @@ public class Employee {
 	}
 
 	public Employee(int id, String name, Address address) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.address = address;

@@ -1,25 +1,21 @@
 package com.java.dp.factorymethod;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class FactoryTest {
-	//Factory Method Pattern says that just define an interface or abstract class 
-	//for creating an object but let the subclasses decide which class to instantiate. 
+	/*Factory Design Pattern is one of the popular Creational Design Patterns.
+
+	The main aim of Factory Design Pattern is that separate objects or instances creation logic from client. 
+	We implement Object creation logic in a Factory class without exposing that logic to the client.
+
+	Factory Design Pattern is also know as Factory Method Design Pattern. 
+	It is used when we have a super class with multiple sub-classes and based on input, 
+	we need to return one of the sub-class. */
 	public static void main(String[] args) throws IOException {
 		System.out.println(" Please the entercomm of the plan which the bill will be generated");
-		BufferedReader br = new BufferedReader(
-				new InputStreamReader(System.in));
-		String plan = br.readLine();
-		System.out.println("Enter the nuber of units for bill  will be calculated:");
-		BufferedReader br1 = new BufferedReader(
-				new InputStreamReader(System.in));
-		String unit =br1.readLine();
 		
-		int units = Integer.parseInt(unit);
-		Plan plan2 = PlanFactory.getPlan(plan);
-		plan2.calculateBill(units);
+		Plan plan2 = PlanFactory.getPlan("DOMESTICPLAN");
+		plan2.calculateBill(10);
 	}
 }
 	

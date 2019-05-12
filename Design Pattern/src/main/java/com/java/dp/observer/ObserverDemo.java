@@ -2,7 +2,10 @@ package com.java.dp.observer;
 
 public class ObserverDemo {
 	/*Reference link : https://www.journaldev.com/1739/observer-design-pattern-in-java
-	 * https://www.journaldev.com/1827/java-design-patterns-example-tutorial#memento-pattern
+	 Observer Pattern is one of the behavioral design pattern. Observer design pattern is useful 
+	 when you are interested in the state of an object and want to get notified whenever there is any change. 
+	 In observer pattern, the object that watch on the state of another object are called Observer and
+	  the object that is being watched is called Subject.	 
 */	
 	/*Define a one-to-many dependency between objects so that when one object changes state,
 	all its dependents are notified and updated automatically.*/

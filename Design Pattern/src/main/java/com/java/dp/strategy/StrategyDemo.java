@@ -1,7 +1,13 @@
 package com.java.dp.strategy;
 
+
 public class StrategyDemo {
 
+/*	Ref link- https://www.journaldev.com/1754/strategy-design-pattern-in-java-example-tutorial
+  	Strategy design pattern is one of the behavioral design pattern. 
+	Strategy pattern is used when we have multiple algorithm for a specific task and 
+	client decides the actual implementation to be used at runtime.
+	*/
 	public static void main(String[] args) {
 		ShoppingCart shoppingCart = new ShoppingCart();
 		Item item1 = new Item("123", 10);

@@ -6,7 +6,9 @@ public class TemplateDemo {
 	HouseTemplate houseTemplate =  new WoodenHouse();
 	// Using template method
 	houseTemplate.buildHouse();
+	houseTemplate.buildPillars();
 	
+	System.out.println();
 	System.out.println("********************************************************");
 	houseTemplate = new GlassHouse();
 	houseTemplate.buildHouse();
