@@ -1,25 +1,23 @@
 package com.java.dp.strategy;
 
-
 public class StrategyDemo {
-
-/*	Ref link- https://www.journaldev.com/1754/strategy-design-pattern-in-java-example-tutorial
-  	Strategy design pattern is one of the behavioral design pattern. 
-	Strategy pattern is used when we have multiple algorithm for a specific task and 
-	client decides the actual implementation to be used at runtime.
-	*/
+	/*A Strategy Pattern says that "defines a family of functionality, encapsulate each one, and make them interchangeable".
+	Benefits:
+		It provides a substitute to subclassing.
+		It defines each behavior within its own class, eliminating the need for conditional statements.
+		It makes it easier to extend and incorporate new behavior without changing the application.
+	Usage:
+		When the multiple classes differ only in their behaviors.e.g. Servlet API.
+		It is used when you need different variations of an algorithm.*/
+	
 	public static void main(String[] args) {
-		ShoppingCart shoppingCart = new ShoppingCart();
-		Item item1 = new Item("123", 10);
-		Item item2 = new Item("456", 20);
-		shoppingCart.addItem(item1);
-		shoppingCart.addItem(item2);
+		Context context = new Context(new AdditionStrategy());
+		float result = context.executeStrategy(10, 20);
+		System.out.println(" The AdditionStrategy result is: " + result);
 		
-		//pay by paypal
-		shoppingCart.pay(new PaypalStrategy("myemail@example.com", "mypwd"));
-		
-		//pay by credit card
-		shoppingCart.pay(new CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"));
+		Context context2 = new Context(new SubtractionStrategy());
+		float result2 = context2.executeStrategy(30, 20);
+		System.out.println(" The SubtractionStrategy result is: " + result2);
 	}
 
 }
